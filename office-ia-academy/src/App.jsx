@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -23,11 +23,11 @@ function RedirectHandler() {
 }
 
 function ScrollToHash() {
-  const { hash } = window.location
+  const { hash } = useLocation()
   useEffect(() => {
     if (hash) {
       const el = document.getElementById(hash.replace('#', ''))
-      if (el) el.scrollIntoView({ behavior: 'smooth' })
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100)
     }
   }, [hash])
   return null
