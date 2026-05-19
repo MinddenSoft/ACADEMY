@@ -27,12 +27,12 @@ export default function Navbar() {
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-400 to-pink-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition-shadow">
               <Code2 className="w-5 h-5 text-white" />
             </div>
-            <span className="font-display font-bold text-lg text-slate-900 dark:text-white">DevMind Academy</span>
+            <span className={`font-display font-bold text-lg transition-colors ${scrolled ? 'text-slate-900' : 'text-white'} dark:text-white`}>DevMind Academy</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
             {links.map((link) => (
-              <Link key={link.href} to={link.href} className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors relative group">
+              <Link key={link.href} to={link.href} className={`text-sm font-medium transition-colors relative group ${scrolled ? 'text-slate-700 hover:text-emerald-500' : 'text-white/90 hover:text-white'} dark:text-slate-300 dark:hover:text-emerald-400`}>
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-400 to-pink-400 group-hover:w-full transition-all duration-300" />
               </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-2 md:hidden">
             <ThemeToggle />
-            <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">
+            <button onClick={() => setMobileOpen(!mobileOpen)} className={`p-2 transition-colors ${scrolled ? 'text-slate-700 hover:text-slate-900' : 'text-white/90 hover:text-white'} dark:text-slate-300 dark:hover:text-white`}>
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
