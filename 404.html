@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mindden Academy</title>
+    <script>
+      (function () {
+        var base = '/ACADEMY';
+        var devPath = base + '/developer-ia-academy/';
+        var officePath = base + '/office-ia-academy/';
+        var current = location.pathname;
+
+        sessionStorage.setItem('redirect', current);
+
+        if (current.startsWith(devPath)) {
+          location.replace(devPath);
+        } else if (current.startsWith(officePath)) {
+          location.replace(officePath);
+        } else {
+          location.replace(base + '/');
+        }
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

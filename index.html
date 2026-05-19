@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindden Academy</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background: #0f172a;
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+      }
+      h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; }
+      p { color: #94a3b8; font-size: 1.125rem; }
+      .cards { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+      .card {
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 1rem;
+        padding: 2rem;
+        width: 320px;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s, border-color 0.2s;
+      }
+      .card:hover { transform: translateY(-4px); border-color: #6366f1; }
+      .card h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+      .card p { font-size: 0.875rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Mindden Academy</h1>
+    <p>Selecciona un programa</p>
+    <div class="cards">
+      <a class="card" href="developer-ia-academy/">
+        <h2>DevMind Academy</h2>
+        <p>Programa Experto en IA para Desarrolladores</p>
+      </a>
+      <a class="card" href="office-ia-academy/">
+        <h2>OfficeMind Academy</h2>
+        <p>Programa Experto en IA Aplicada a la Gestión Administrativa</p>
+      </a>
+    </div>
+  </body>
+</html>
