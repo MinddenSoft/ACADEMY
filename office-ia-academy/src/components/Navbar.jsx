@@ -32,15 +32,15 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-6">
             {links.map((link) => (
-              <a key={link.href} href={link.href} className={`text-sm font-medium transition-colors relative group ${scrolled ? 'text-slate-700 hover:text-cyan-500' : 'text-white/90 hover:text-white'} dark:text-slate-300 dark:hover:text-cyan-400`}>
+              <Link key={link.href} to={link.href} className={`text-sm font-medium transition-colors relative group ${scrolled ? 'text-slate-700 hover:text-cyan-500' : 'text-white/90 hover:text-white'} dark:text-slate-300 dark:hover:text-cyan-400`}>
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-violet-400 group-hover:w-full transition-all duration-300" />
-              </a>
+              </Link>
             ))}
             <ThemeToggle />
-            <a href="/#temario" className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:-translate-y-0.5">
+            <Link to="/#temario" className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:-translate-y-0.5">
               Ver Temario
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
@@ -55,13 +55,13 @@ export default function Navbar() {
           <div className="md:hidden pb-6 border-t border-slate-200 dark:border-white/10 pt-4">
             <div className="flex flex-col gap-3">
               {links.map((link) => (
-                <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="px-4 py-3 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors font-medium">
+                <Link key={link.href} to={link.href} onClick={() => setMobileOpen(false)} className="px-4 py-3 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors font-medium">
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <a href="/#temario" onClick={() => setMobileOpen(false)} className="mx-4 mt-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 text-white text-center font-semibold">
+              <Link to="/#temario" onClick={() => setMobileOpen(false)} className="mx-4 mt-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 text-white text-center font-semibold">
                 Ver Temario
-              </a>
+              </Link>
             </div>
           </div>
         )}

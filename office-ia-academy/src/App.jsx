@@ -22,11 +22,23 @@ function RedirectHandler() {
   return null
 }
 
+function ScrollToHash() {
+  const { hash } = window.location
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.replace('#', ''))
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [hash])
+  return null
+}
+
 function App() {
   return (
     <ThemeProvider>
       <Router basename={import.meta.env.BASE_URL}>
         <RedirectHandler />
+        <ScrollToHash />
         <div className="min-h-screen bg-white dark:bg-dark-900 transition-colors duration-300">
           <Navbar />
           <Routes>
