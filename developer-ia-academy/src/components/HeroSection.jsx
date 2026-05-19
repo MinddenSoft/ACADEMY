@@ -33,9 +33,9 @@ export default function HeroSection() {
             Explorar Temario
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
-          <a href="#objetivos" className="px-8 py-4 rounded-2xl bg-white/5 border border-white/10 text-white font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1">
+          <Link to="/#objetivos" className="px-8 py-4 rounded-2xl bg-white/5 border border-white/10 text-white font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1">
             Conocer Objetivos
-          </a>
+          </Link>
         </div>
 
         <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
