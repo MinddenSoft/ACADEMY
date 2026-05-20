@@ -9,7 +9,7 @@ import SectionDetailPage from './pages/SectionDetailPage'
 import ErrorBoundary from './components/ErrorBoundary'
 import FinalProjectPage from './pages/FinalProjectPage'
 
-const BASENAME = '/developer-ia-academy/dist'
+const BASENAME = '/ACADEMY/developer-ia-academy'
 function getBasename() { return BASENAME }
 
 function RedirectHandler() {

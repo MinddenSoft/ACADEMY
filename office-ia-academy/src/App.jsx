@@ -8,7 +8,7 @@ import ModuleDetailPage from './pages/ModuleDetailPage'
 import SectionDetailPage from './pages/SectionDetailPage'
 import FinalProjectPage from './pages/FinalProjectPage'
 
-const BASENAME = '/office-ia-academy/dist'
+const BASENAME = '/ACADEMY/office-ia-academy'
 function getBasename() { return BASENAME }
 
 function RedirectHandler() {
