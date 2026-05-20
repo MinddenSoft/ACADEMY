@@ -4,50 +4,184 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mindden Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        font-family: system-ui, -apple-system, sans-serif;
-        background: #0f172a;
+        font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+        background: #0D1F2D;
         color: #fff;
         min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        padding: 2rem;
+        -webkit-font-smoothing: antialiased;
       }
-      h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; }
-      p { color: #94a3b8; font-size: 1.125rem; }
-      .cards { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+      .hero {
+        width: 100%;
+        height: 60vh;
+        min-height: 420px;
+        background: url('cover-bg.png') center 25%/cover no-repeat;
+        position: relative;
+      }
+      .hero::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 160px;
+        background: linear-gradient(to top, #0D1F2D, transparent);
+      }
+      .hero-logo {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1rem;
+      }
+      .hero-logo img {
+        height: 140px;
+        width: auto;
+      }
+      .hero-content {
+        position: absolute;
+        bottom: 7rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 2;
+        width: 100%;
+        max-width: 720px;
+        padding: 0 1.5rem;
+      }
+      .hero-content h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #fff;
+        text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+      }
+      .hero-content p {
+        color: rgba(255,255,255,0.7);
+        font-size: 1.15rem;
+        margin-top: 8px;
+        text-shadow: 0 1px 10px rgba(0,0,0,0.4);
+      }
+      .content {
+        max-width: 720px;
+        margin: -48px auto 0;
+        padding: 0 1.5rem 4rem;
+        position: relative;
+        z-index: 2;
+      }
+      .cards {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
       .card {
-        background: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 1rem;
+        background: #183767;
+        border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 16px;
         padding: 2rem;
         width: 320px;
         text-decoration: none;
         color: inherit;
-        transition: transform 0.2s, border-color 0.2s;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        position: relative;
+        overflow: hidden;
       }
-      .card:hover { transform: translateY(-4px); border-color: #6366f1; }
-      .card h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-      .card p { font-size: 0.875rem; }
+      .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      }
+      .card:hover::before {
+        opacity: 1;
+      }
+      .card.dev::before {
+        background: linear-gradient(90deg, #2dd4bf, #14b8a6);
+      }
+      .card.dev:hover {
+        border-color: rgba(45,212,191,0.25);
+      }
+      .card.office::before {
+        background: linear-gradient(90deg, #a78bfa, #8b5cf6);
+      }
+      .card.office:hover {
+        border-color: rgba(167,139,250,0.25);
+      }
+      .card h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #fff;
+      }
+      .card p {
+        font-size: 0.875rem;
+        color: #8FA4B8;
+        line-height: 1.6;
+      }
+      .badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        letter-spacing: 0.02em;
+      }
+      .badge.dev {
+        background: rgba(45,212,191,0.12);
+        border: 1px solid rgba(45,212,191,0.25);
+        color: #2dd4bf;
+      }
+      .badge.office {
+        background: rgba(167,139,250,0.12);
+        border: 1px solid rgba(167,139,250,0.25);
+        color: #a78bfa;
+      }
+      @media (max-width: 640px) {
+        .hero { height: 40vh; min-height: 280px; }
+        .hero-logo img { height: 100px; }
+        .hero-content { bottom: 4rem; }
+        .hero-content h1 { font-size: 2rem; }
+        .card { width: 100%; }
+      }
     </style>
   </head>
   <body>
-    <h1>Mindden Academy</h1>
-    <p>Selecciona un programa</p>
-    <div class="cards">
-      <a class="card" href="developer-ia-academy/">
-        <h2>DevMind Academy</h2>
-        <p>Programa Experto en IA para Desarrolladores</p>
-      </a>
-      <a class="card" href="office-ia-academy/">
-        <h2>OfficeMind Academy</h2>
-        <p>Programa Experto en IA Aplicada a la Gestión Administrativa</p>
-      </a>
+    <script>history.scrollRestoration='manual';window.scrollTo(0,0)</script>
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-logo">
+          <img src="assets/mindden-logo-white.svg" alt="MindDen">
+        </div>
+        <h1>Mindden Academy</h1>
+        <p>Formación en Inteligencia Artificial</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="cards">
+        <a class="card dev" href="developer-ia-academy/dist/">
+          <div class="badge dev">Desarrolladores</div>
+          <h2>DevMind Academy</h2>
+          <p>Programa Experto en IA para Desarrolladores. Python, ML, Deep Learning, LLMs y MLOps.</p>
+        </a>
+        <a class="card office" href="office-ia-academy/dist/">
+          <div class="badge office">Gestión Administrativa</div>
+          <h2>OfficeMind Academy</h2>
+          <p>Programa Experto en IA Aplicada a la Gestión Administrativa. Automatización, datos y productividad.</p>
+        </a>
+      </div>
     </div>
   </body>
 </html>

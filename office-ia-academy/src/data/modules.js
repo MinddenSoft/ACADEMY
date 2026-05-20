@@ -3162,38 +3162,23 @@ export function getModuleById(id) {
 
 export const levelConfig = {
   inicial: {
-    color: 'from-emerald-400 to-cyan-400',
-    bg: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20',
-    bgDark: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-    dot: 'bg-emerald-400',
-    border: 'border-emerald-500/20',
+    color: 'from-accent-400 to-primary-500',
+    bg: 'bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 border-0',
   },
   intermedio: {
-    color: 'from-cyan-400 to-blue-400',
-    bg: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/20',
-    bgDark: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
-    dot: 'bg-cyan-400',
-    border: 'border-cyan-500/20',
+    color: 'from-accent-400 to-primary-600',
+    bg: 'bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 border-0',
   },
   'intermedio-avanzado': {
-    color: 'from-blue-400 to-violet-400',
-    bg: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20',
-    bgDark: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
-    dot: 'bg-blue-400',
-    border: 'border-blue-500/20',
+    color: 'from-accent-500 to-primary-700',
+    bg: 'bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 border-0',
   },
   avanzado: {
-    color: 'from-violet-400 to-purple-400',
-    bg: 'bg-violet-500/10 text-violet-600 dark:text-violet-400 border-violet-500/20',
-    bgDark: 'bg-violet-500/10 text-violet-400 border-violet-500/20',
-    dot: 'bg-violet-400',
-    border: 'border-violet-500/20',
+    color: 'from-accent-500 to-primary-800',
+    bg: 'bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 border-0',
   },
   experto: {
-    color: 'from-purple-400 to-pink-400',
-    bg: 'bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20',
-    bgDark: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
-    dot: 'bg-purple-400',
-    border: 'border-purple-500/20',
+    color: 'from-accent-600 to-primary-900',
+    bg: 'bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 border-0',
   },
 }

@@ -8,17 +8,31 @@ import ModuleDetailPage from './pages/ModuleDetailPage'
 import SectionDetailPage from './pages/SectionDetailPage'
 import FinalProjectPage from './pages/FinalProjectPage'
 
+const BASENAME = '/office-ia-academy/dist'
+function getBasename() { return BASENAME }
+
 function RedirectHandler() {
   const navigate = useNavigate()
+  const { pathname } = useLocation()
   useEffect(() => {
+    if (pathname.endsWith('index.html')) {
+      navigate(pathname.replace(/\/?index\.html$/, '') || '/', { replace: true })
+      return
+    }
     const redirect = sessionStorage.getItem('redirect')
     if (redirect) {
       sessionStorage.removeItem('redirect')
-      const base = import.meta.env.BASE_URL
+      const base = getBasename()
       const relative = redirect.replace(base, '').replace(/\/$/, '')
       if (relative) navigate(relative, { replace: true })
     }
-  }, [navigate])
+  }, [navigate, pathname])
+  return null
+}
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
   return null
 }
 
@@ -36,8 +50,9 @@ function ScrollToHash() {
 function App() {
   return (
     <ThemeProvider>
-      <Router basename={import.meta.env.BASE_URL}>
+      <Router basename={getBasename()}>
         <RedirectHandler />
+        <ScrollToTop />
         <ScrollToHash />
         <div className="min-h-screen bg-white dark:bg-dark-900 transition-colors duration-300">
           <Navbar />

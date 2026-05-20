@@ -163,38 +163,23 @@ export function getModuleById(id) {
 
 export const levelConfig = {
   inicial: {
-    color: 'from-emerald-400 to-teal-400',
-    bg: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20',
-    bgDark: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-    dot: 'bg-emerald-400',
-    border: 'border-emerald-500/20',
+    color: 'from-accent-400 to-primary-500',
+    bg: 'bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 border-0',
   },
   intermedio: {
-    color: 'from-teal-400 to-blue-400',
-    bg: 'bg-teal-500/10 text-teal-600 dark:text-teal-400 border-teal-500/20',
-    bgDark: 'bg-teal-500/10 text-teal-400 border-teal-500/20',
-    dot: 'bg-teal-400',
-    border: 'border-teal-500/20',
+    color: 'from-accent-400 to-primary-600',
+    bg: 'bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 border-0',
   },
   'intermedio-avanzado': {
-    color: 'from-blue-400 to-indigo-400',
-    bg: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20',
-    bgDark: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
-    dot: 'bg-blue-400',
-    border: 'border-blue-500/20',
+    color: 'from-accent-500 to-primary-700',
+    bg: 'bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 border-0',
   },
   avanzado: {
-    color: 'from-indigo-400 to-pink-400',
-    bg: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20',
-    bgDark: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
-    dot: 'bg-indigo-400',
-    border: 'border-indigo-500/20',
+    color: 'from-accent-500 to-primary-800',
+    bg: 'bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 border-0',
   },
   experto: {
-    color: 'from-pink-400 to-rose-400',
-    bg: 'bg-pink-500/10 text-pink-600 dark:text-pink-400 border-pink-500/20',
-    bgDark: 'bg-pink-500/10 text-pink-400 border-pink-500/20',
-    dot: 'bg-pink-400',
-    border: 'border-pink-500/20',
+    color: 'from-accent-600 to-primary-900',
+    bg: 'bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 border-0',
   },
 }

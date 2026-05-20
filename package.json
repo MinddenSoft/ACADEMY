@@ -1,6 +1,7 @@
 {
-  "devDependencies": {
-    "@tailwindcss/vite": "^4.3.0",
-    "tailwindcss": "^4.3.0"
+  "name": "mindden-academy",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js"
   }
 }

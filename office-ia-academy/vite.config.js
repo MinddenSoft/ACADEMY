@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/ACADEMY/office-ia-academy/',
+  base: '/office-ia-academy/dist/',
   plugins: [react(), tailwindcss()],
 })
