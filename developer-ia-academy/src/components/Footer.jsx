@@ -20,8 +20,8 @@ export default function Footer() {
   return (
     <footer className="relative bg-primary-500 dark:bg-dark-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          <div className="sm:col-span-2 lg:col-span-1">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+          <div className="sm:col-span-2 lg:col-span-2">
             <Link to="/" className="flex items-center gap-2.5 mb-4">
               <div className="w-9 h-9 rounded-lg bg-white/20 flex items-center justify-center">
                 <Code2 className="w-5 h-5 text-white" />
