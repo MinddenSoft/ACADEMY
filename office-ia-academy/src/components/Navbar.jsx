@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center gap-2.5">
-            <a href="/">
+            <a href="/ACADEMY/">
               <svg viewBox="0 0 828 487" className={`h-7 w-auto transition-colors ${scrolled ? 'text-primary-900' : 'text-white'} dark:text-white`} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M244.066 216V172.877C244.066 152.727 235.094 144.092 220.492 144.092C206.366 144.092 196.059 152.631 196.059 172.877V224.689H184.033V172.493C184.033 152.535 173.63 144.188 159.982 144.188C144.997 144.188 136.026 154.646 136.026 172.493V224.689H124V135.265H136.026V145.531C142.897 136.512 149.865 133.058 161.127 133.058C174.489 133.058 183.269 138.335 190.237 150.233C197.681 138.335 207.321 132.866 221.16 132.866C241.489 132.866 256.187 145.435 256.187 171.437V224.593H244.066V216Z"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M277.146 119.271C277.146 122.42 279.699 124.973 282.848 124.973C285.997 124.973 288.55 122.42 288.55 119.271C288.55 116.122 285.997 113.569 282.848 113.569C279.699 113.569 277.146 116.122 277.146 119.271ZM276.611 135.265V224.689H288.637V135.265H276.611Z"/>
