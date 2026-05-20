@@ -14,9 +14,9 @@ export default function Navbar() {
   }, [])
 
   const links = [
-    { href: '/#objetivos', label: 'Objetivos' },
-    { href: '/#temario', label: 'Temario' },
-    { href: '/proyecto-final', label: 'Proyecto Final' },
+    { to: { pathname: '/', hash: '#objetivos' }, label: 'Objetivos' },
+    { to: { pathname: '/', hash: '#temario' }, label: 'Temario' },
+    { to: '/proyecto-final', label: 'Proyecto Final' },
   ]
 
   return (
@@ -40,13 +40,13 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-6">
             {links.map((link) => (
-              <Link key={link.href} to={link.href} className={`text-sm font-medium transition-colors relative group ${scrolled ? 'text-neutral-600 hover:text-accent-500' : 'text-white/90 hover:text-white'} dark:text-neutral-300 dark:hover:text-accent-400`}>
+              <Link key={link.label} to={link.to} className={`text-sm font-medium transition-colors relative group ${scrolled ? 'text-neutral-600 hover:text-accent-500' : 'text-white/90 hover:text-white'} dark:text-neutral-300 dark:hover:text-accent-400`}>
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-500 group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
             <ThemeToggle />
-            <Link to="/#temario" className="px-5 py-2.5 rounded-lg bg-primary-500 text-white text-sm font-semibold hover:bg-primary-600 transition-all duration-300 hover:-translate-y-0.5 shadow-sm hover:shadow-md">
+            <Link to={{ pathname: '/', hash: '#temario' }} className="px-5 py-2.5 rounded-lg bg-primary-500 text-white text-sm font-semibold hover:bg-primary-600 transition-all duration-300 hover:-translate-y-0.5 shadow-sm hover:shadow-md">
               Ver Temario
             </Link>
           </div>
@@ -63,11 +63,11 @@ export default function Navbar() {
           <div className="md:hidden pb-6 border-t border-neutral-100 dark:border-white/10 pt-4">
             <div className="flex flex-col gap-3">
               {links.map((link) => (
-                <Link key={link.href} to={link.href} onClick={() => setMobileOpen(false)} className="px-4 py-3 rounded-lg text-neutral-600 dark:text-neutral-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-accent-500/5 dark:hover:bg-accent-500/10 transition-colors font-medium">
+                <Link key={link.label} to={link.to} onClick={() => setMobileOpen(false)} className="px-4 py-3 rounded-lg text-neutral-600 dark:text-neutral-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-accent-500/5 dark:hover:bg-accent-500/10 transition-colors font-medium">
                   {link.label}
                 </Link>
               ))}
-              <Link to="/#temario" onClick={() => setMobileOpen(false)} className="mx-4 mt-2 px-5 py-3 rounded-lg bg-primary-500 text-white text-center font-semibold hover:bg-primary-600 transition-colors">
+              <Link to={{ pathname: '/', hash: '#temario' }} onClick={() => setMobileOpen(false)} className="mx-4 mt-2 px-5 py-3 rounded-lg bg-primary-500 text-white text-center font-semibold hover:bg-primary-600 transition-colors">
                 Ver Temario
               </Link>
             </div>

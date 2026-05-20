@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import { FlaskConical, Mail } from 'lucide-react'
 
 const programLinks = [
-  { label: 'Objetivos', to: '/#objetivos' },
-  { label: 'Temario', to: '/#temario' },
+  { label: 'Objetivos', to: { pathname: '/', hash: '#objetivos' } },
+  { label: 'Temario', to: { pathname: '/', hash: '#temario' } },
   { label: 'Proyecto Final', to: '/proyecto-final' },
 ]
 
