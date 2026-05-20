@@ -1,5 +1,20 @@
 import { Link } from 'react-router-dom'
-import { Code2, Mail, Globe } from 'lucide-react'
+import { Code2, Mail } from 'lucide-react'
+
+const programLinks = [
+  { label: 'Objetivos', to: '/#objetivos' },
+  { label: 'Temario', to: '/#temario' },
+  { label: 'Proyecto Final', to: '/proyecto-final' },
+]
+
+const moduleLinks = [
+  { label: 'Fundamentos de IA', to: '/modulo/fundamentos-ia-herramientas' },
+  { label: 'Python y Datos', to: '/modulo/python-datos-visualizacion' },
+  { label: 'Machine Learning', to: '/modulo/machine-learning-fundamentos' },
+  { label: 'Deep Learning', to: '/modulo/deep-learning-redes-neuronales' },
+  { label: 'LLMs e IA Generativa', to: '/modulo/llms-genai-avanzado' },
+  { label: 'MLOps y Producción', to: '/modulo/mlops-ingenieria-produccion' },
+]
 
 export default function Footer() {
   return (
@@ -21,9 +36,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Programa</h4>
             <ul className="space-y-3">
-              {['Objetivos', 'Temario', 'Proyecto Final', 'Certificación'].map((item) => (
-                <li key={item}>
-                  <a href={`/#${item.toLowerCase().replace(' ', '-')}`} className="text-white/60 text-sm hover:text-white transition-colors">{item}</a>
+              {programLinks.map(({ label, to }) => (
+                <li key={to}>
+                  <Link to={to} className="text-white/60 text-sm hover:text-white transition-colors">{label}</Link>
                 </li>
               ))}
             </ul>
@@ -32,9 +47,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Módulos</h4>
             <ul className="space-y-3">
-              {['Fundamentos', 'Python y Datos', 'Machine Learning', 'Deep Learning'].map((item) => (
-                <li key={item}>
-                  <a href="/#temario" className="text-white/60 text-sm hover:text-white transition-colors">{item}</a>
+              {moduleLinks.map(({ label, to }) => (
+                <li key={to}>
+                  <Link to={to} className="text-white/60 text-sm hover:text-white transition-colors">{label}</Link>
                 </li>
               ))}
             </ul>
@@ -43,13 +58,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Contacto</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-white/70 text-sm">
-                <Mail className="w-4 h-4 text-white/80" />
-                info@devmind.academy
-              </li>
-              <li className="flex items-center gap-2 text-white/70 text-sm">
-                <Globe className="w-4 h-4 text-white/80" />
-                www.devmind.academy
+              <li className="flex items-center gap-2 text-sm">
+                <Mail className="w-4 h-4 text-white/80 shrink-0" />
+                <a href="mailto:mbriega@mindden.com" className="text-white/70 hover:text-white transition-colors">mbriega@mindden.com</a>
               </li>
             </ul>
           </div>
@@ -59,11 +70,7 @@ export default function Footer() {
           <p className="text-white/50 text-sm">
             &copy; 2026 DevMind Academy. Todos los derechos reservados.
           </p>
-          <div className="flex items-center gap-4">
-            {['Privacidad', 'Términos', 'Cookies'].map((item) => (
-              <a key={item} href="#" className="text-white/50 text-sm hover:text-white/70 transition-colors">{item}</a>
-            ))}
-          </div>
+          <p className="text-white/40 text-xs uppercase tracking-widest">Crafted by Null Pointer Society</p>
         </div>
       </div>
     </footer>

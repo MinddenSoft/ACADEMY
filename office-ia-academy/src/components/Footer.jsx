@@ -1,5 +1,20 @@
 import { Link } from 'react-router-dom'
-import { FlaskConical, Mail, Globe } from 'lucide-react'
+import { FlaskConical, Mail } from 'lucide-react'
+
+const programLinks = [
+  { label: 'Objetivos', to: '/#objetivos' },
+  { label: 'Temario', to: '/#temario' },
+  { label: 'Proyecto Final', to: '/proyecto-final' },
+]
+
+const moduleLinks = [
+  { label: 'Alfabetización Digital en IA', to: '/modulo/alfabetizacion-digital-ia' },
+  { label: 'Gestión Documental', to: '/modulo/gestion-documental-comunicacion' },
+  { label: 'Análisis de Datos y Reportes', to: '/modulo/analisis-datos-reportes' },
+  { label: 'Automatización de Procesos', to: '/modulo/automatizacion-procesos-ia' },
+  { label: 'Creación de Contenido', to: '/modulo/creacion-contenido-multimedia' },
+  { label: 'Implementación y Consultoría', to: '/modulo/implementacion-consultoria-ia' },
+]
 
 export default function Footer() {
   return (
@@ -21,9 +36,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Programa</h4>
             <ul className="space-y-3">
-              {['Objetivos', 'Temario', 'Proyecto Final', 'Certificación'].map((item) => (
-                <li key={item}>
-                  <a href={`/#${item.toLowerCase().replace(' ', '-')}`} className="text-white/60 text-sm hover:text-white transition-colors">{item}</a>
+              {programLinks.map(({ label, to }) => (
+                <li key={to}>
+                  <Link to={to} className="text-white/60 text-sm hover:text-white transition-colors">{label}</Link>
                 </li>
               ))}
             </ul>
@@ -32,9 +47,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Módulos</h4>
             <ul className="space-y-3">
-              {['Alfabetización Digital', 'Gestión Documental', 'Análisis de Datos', 'Automatización'].map((item) => (
-                <li key={item}>
-                  <a href="/#temario" className="text-white/60 text-sm hover:text-white transition-colors">{item}</a>
+              {moduleLinks.map(({ label, to }) => (
+                <li key={to}>
+                  <Link to={to} className="text-white/60 text-sm hover:text-white transition-colors">{label}</Link>
                 </li>
               ))}
             </ul>
@@ -43,13 +58,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Contacto</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-white/70 text-sm">
-                <Mail className="w-4 h-4 text-white/80" />
-                info@mindden.academy
-              </li>
-              <li className="flex items-center gap-2 text-white/70 text-sm">
-                <Globe className="w-4 h-4 text-white/80" />
-                www.mindden.academy
+              <li className="flex items-center gap-2 text-sm">
+                <Mail className="w-4 h-4 text-white/80 shrink-0" />
+                <a href="mailto:mbriega@mindden.com" className="text-white/70 hover:text-white transition-colors">mbriega@mindden.com</a>
               </li>
             </ul>
           </div>
@@ -59,11 +70,7 @@ export default function Footer() {
           <p className="text-white/50 text-sm">
             &copy; 2026 OfficeMind Academy. Todos los derechos reservados.
           </p>
-          <div className="flex items-center gap-4">
-            {['Privacidad', 'Términos', 'Cookies'].map((item) => (
-              <a key={item} href="#" className="text-white/50 text-sm hover:text-white/70 transition-colors">{item}</a>
-            ))}
-          </div>
+          <p className="text-white/40 text-xs uppercase tracking-widest">Crafted by Null Pointer Society</p>
         </div>
       </div>
     </footer>
