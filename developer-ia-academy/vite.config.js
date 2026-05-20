@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/developer-ia-academy/dist/',
+  base: '/ACADEMY/developer-ia-academy/',
   plugins: [react(), tailwindcss()],
 })
