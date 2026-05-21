@@ -1,4 +1,4 @@
-import { GraduationCap, FileText, BarChart3, Zap, Palette, Building2 } from 'lucide-react'
+import { GraduationCap, FileText, BarChart3, Zap, Palette, Building2, Shield, TrendingUp } from 'lucide-react'
 
 export const modules = [
   {
@@ -665,6 +665,343 @@ d) Cuando queremos usar plugins de terceros
   },
   {
     id: 2,
+    slug: 'marco-legal-etica-privacidad',
+    title: 'Marco Legal, Ética y Privacidad en IA',
+    level: 'Nivel Inicial',
+    levelKey: 'inicial',
+    icon: Shield,
+    objective: 'Comprender el marco normativo europeo (AI Act y RGPD) y aplicar criterios éticos para usar la IA de forma responsable en el entorno laboral.',
+    description: 'Antes de utilizar la IA en tu trabajo diario, necesitas conocer las reglas del juego. Este módulo te guía por la normativa europea vigente, te explica cómo proteger los datos de tu empresa y tus clientes, y te da criterios claros para tomar decisiones éticas cuando la IA entra en juego.',
+    duration: '3 semanas',
+    sections: [
+      {
+        title: '2.1. El AI Act Europeo: Lo Que Todo Profesional Debe Conocer',
+        content: `En junio de 2024, la Unión Europea aprobó la primera ley del mundo que regula específicamente la inteligencia artificial: el AI Act. Si trabajas en una empresa europea, esta normativa te afecta directamente. No necesitas ser jurista para entenderla, pero sí necesitas conocer sus fundamentos para no cometer errores con consecuencias legales.
+
+Imagina que tu empresa decide implementar un sistema de IA para filtrar currículums automáticamente. Sin saberlo, ese sistema podría estar clasificado como "IA de alto riesgo" bajo el AI Act, lo que implica requisitos estrictos de transparencia, supervisión humana y documentación. Si nadie en la empresa conoce la normativa, podéis estar operando de forma ilegal sin darse cuenta.
+
+**¿Qué es el AI Act y por qué existe?**
+
+El AI Act nace de una preocupación legítima: la IA tiene un poder enorme para influir en decisiones que afectan a las personas, desde si obtienes un crédito bancario hasta si pasas el filtro de selección de personal. Sin regulación, estos sistemas pueden perpetuar discriminaciones o violar derechos fundamentales.
+
+La ley clasifica los sistemas de IA según el nivel de riesgo que suponen para los derechos y la seguridad de las personas. No prohíbe la IA, sino que establece reglas más o menos estrictas según lo que esté en juego.
+
+**Los cuatro niveles de riesgo**
+
+*Riesgo inaceptable (Prohibido):*
+Sistemas directamente prohibidos en la UE:
+- Sistemas de puntuación social que clasifiquen a ciudadanos según su comportamiento
+- Identificación biométrica en tiempo real en espacios públicos (con excepciones muy limitadas)
+- IA que manipule el comportamiento de personas vulnerables de forma perjudicial
+- Sistemas para inferir emociones de empleados o estudiantes sin base científica justificada
+
+*Riesgo alto (Regulado estrictamente):*
+Sistemas con impacto significativo en la vida de las personas. Relevantes para el trabajo de oficina:
+- Sistemas de selección y filtrado de personal (ATS con IA)
+- Evaluación del rendimiento de empleados mediante IA
+- Concesión de créditos o seguros basada en IA
+- Diagnósticos médicos asistidos por IA
+
+Para estos sistemas el AI Act exige: evaluaciones de conformidad, documentación técnica detallada, supervisión humana obligatoria y registros de actividad.
+
+*Riesgo limitado (Obligaciones de transparencia):*
+Los chatbots y asistentes de IA que interactúan con clientes deben informar claramente que el usuario está hablando con una IA, no con un humano. Los contenidos generados por IA (textos, imágenes) deben estar etiquetados como tal.
+
+*Riesgo mínimo (Sin obligaciones adicionales):*
+La gran mayoría de las aplicaciones de IA que usarás en tu trabajo: filtros de spam, correctores ortográficos, sistemas de recomendación de contenido, traducción automática.
+
+**Fechas clave de implementación**
+
+- Febrero 2025: prohibición de sistemas de riesgo inaceptable
+- Agosto 2025: normativa para modelos de IA de propósito general (GPT-4, Gemini...)
+- Agosto 2026: aplicación a sistemas de alto riesgo
+- Agosto 2027: plena implementación
+
+> **Dato Importante:** El incumplimiento del AI Act puede acarrear multas de hasta 35 millones de euros o el 7% de la facturación anual global de la empresa, la que sea mayor.
+
+**¿Qué implica esto para tu trabajo?**
+
+1. **Identificar el riesgo** de cualquier sistema de IA que uses: ¿afecta a decisiones sobre personas? ¿toma decisiones automatizadas sin supervisión humana?
+2. **Documentar el uso** de sistemas de IA en procesos críticos.
+3. **Asegurar la supervisión humana** en cualquier proceso de alto riesgo.
+4. **Informar a los interlocutores** cuando interactúen con un sistema de IA.
+5. **Elevar dudas** a tu responsable o departamento legal cuando no estés seguro.
+
+---
+
+**Ejercicio Práctico**
+
+*Objetivo:* Clasificar sistemas de IA según el nivel de riesgo del AI Act.
+
+Analiza los siguientes casos y clasifica cada uno (inaceptable, alto, limitado, mínimo):
+
+1. Tu empresa implementa un sistema que analiza los correos de los empleados para generar una puntuación semanal de "nivel de compromiso" que el manager puede consultar.
+
+2. Se usa un corrector ortográfico con IA integrado en el procesador de textos para documentos internos.
+
+3. El departamento de RRHH adopta una herramienta de IA que ordena automáticamente los CVs y descarta los que no alcanzan una puntuación mínima, sin que ningún humano los vea antes.
+
+4. En atención al cliente se implementa un chatbot que no informa a los usuarios de que es una IA.
+
+5. La web muestra recomendaciones de productos personalizadas basadas en el historial de navegación.
+
+*Reflexión:* ¿Cuál de estos sistemas requeriría más cambios para cumplir con el AI Act? ¿Qué medidas concretas tomarías?
+
+---
+
+**Cuestionario de Autoevaluación**
+
+**Pregunta 1:** ¿Qué característica define principalmente a un sistema de IA de "alto riesgo" según el AI Act?
+a) Que utilice modelos de lenguaje de gran tamaño como GPT-4
+b) Que pueda tener impacto significativo en los derechos o la seguridad de las personas
+c) Que procese más de un millón de datos al día
+d) Que haya sido desarrollado fuera de la Unión Europea
+
+**Respuesta correcta: b.** El criterio central del AI Act es el potencial impacto en los derechos fundamentales o la seguridad de las personas, no las características técnicas del sistema.
+
+**Pregunta 2:** Una empresa española usa un chatbot en su web de atención al cliente. Según el AI Act, ¿cuál es la obligación mínima que debe cumplir?
+a) Obtener certificación oficial de la Agencia Española de Supervisión de IA
+b) Informar a los usuarios de que están interactuando con un sistema de IA
+c) Contratar un seguro de responsabilidad civil por daños de IA
+d) Registrar el chatbot en el Registro Nacional de Sistemas de IA
+
+**Respuesta correcta: b.** Los sistemas de riesgo limitado como chatbots tienen como obligación principal la transparencia: los usuarios deben saber que están hablando con una IA.
+
+**Pregunta 3:** El departamento de RRHH quiere implementar un sistema de IA que filtre automáticamente los CVs sin revisión humana previa. Según el AI Act, este sistema sería:
+a) De riesgo mínimo, ya que agiliza procesos administrativos
+b) De riesgo limitado, solo requiere transparencia con los candidatos
+c) De riesgo alto, requiere supervisión humana y documentación rigurosa
+d) Prohibido directamente por el AI Act
+
+**Respuesta correcta: c.** Los sistemas de selección de personal basados en IA están clasificados como de alto riesgo. La empresa debe garantizar supervisión humana y realizar evaluaciones de conformidad antes de implantarlo.
+
+**Pregunta 4:** ¿Cuál de estos sistemas de IA estaría directamente prohibido por el AI Act en la UE?
+a) Un sistema de traducción automática para documentos internos
+b) Un corrector ortográfico con IA para emails
+c) Un sistema que genera puntuaciones de fiabilidad ciudadana basadas en el comportamiento online
+d) Una herramienta de IA para generar borradores de informes financieros
+
+**Respuesta correcta: c.** Los sistemas de puntuación social que evalúen y clasifiquen a ciudadanos según su comportamiento están explícitamente prohibidos en el AI Act como IA de riesgo inaceptable.`,
+      },
+      {
+        title: '2.2. RGPD e IA: Protección de Datos en el Entorno Laboral',
+        content: `Es lunes por la mañana. Tienes que preparar un informe sobre el rendimiento de 30 clientes y decides usar ChatGPT para acelerar el trabajo. Copias y pegas los nombres, DNIs, emails y datos de compra de cada cliente en el chat para que la IA analice patrones. En menos de un minuto has cometido una posible infracción del Reglamento General de Protección de Datos que podría costar a tu empresa una multa de hasta 20 millones de euros.
+
+No es una exageración. Casos como este ocurren cada semana en empresas de toda Europa. La mayoría no por malicia, sino por desconocimiento.
+
+**¿Qué es el RGPD y qué tiene que ver con la IA?**
+
+El Reglamento General de Protección de Datos (RGPD) regula cómo las empresas tratan los datos personales de ciudadanos europeos. Un dato personal es cualquier información que identifique o permita identificar a una persona: nombre, DNI, email, IP, teléfono, datos de salud, datos bancarios...
+
+Cuando usas una herramienta de IA con datos personales de terceros, estás realizando un "tratamiento de datos personales" que debe cumplir el RGPD.
+
+El problema central: los grandes modelos de lenguaje son servicios de empresas terceras (OpenAI, Google, Anthropic). Cuando introduces datos en ellos, esos datos pueden ser usados para entrenar futuros modelos, almacenados en servidores fuera de la UE, o accedidos por empleados del proveedor. Todo esto puede ser incompatible con el RGPD si no tienes los acuerdos adecuados.
+
+**Los principios RGPD que debes aplicar al usar IA**
+
+*Minimización de datos:*
+Nunca introduzcas más datos personales de los estrictamente necesarios. Si necesitas que la IA analice patrones de compras de clientes, no necesitas sus nombres ni DNIs, solo los importes y fechas. Antes de pegar cualquier información en una herramienta de IA, pregúntate: ¿es realmente necesario este dato para la tarea?
+
+*Anonimización y pseudonimización:*
+Antes de trabajar con datos personales en herramientas de IA, anonimiza o pseudonimiza la información:
+- Sustituye "María García López, DNI 12345678X" por "Cliente 001"
+- Reemplaza fechas de nacimiento exactas por rangos de edad
+- Elimina datos de contacto si no son necesarios para el análisis
+
+La diferencia: los datos pseudonimizados (con clave de reversión) siguen siendo datos personales bajo el RGPD. Los anonimizados (irreversibles), no.
+
+*Base jurídica para el tratamiento:*
+Para tratar datos personales necesitas una base jurídica: ejecución de un contrato, interés legítimo, consentimiento explícito u obligación legal. ¿Tu contrato con el cliente prevé que sus datos se traten con herramientas de IA de terceros?
+
+**Acuerdos de procesamiento de datos (DPA)**
+
+Cuando una empresa usa una herramienta de IA que procesa datos personales, el proveedor de IA debe firmar un Acuerdo de Procesamiento de Datos (DPA):
+
+- **Microsoft Copilot (licencia M365 empresarial):** incluye DPA con garantías RGPD
+- **ChatGPT Enterprise / OpenAI API:** OpenAI ofrece DPA; datos de API no se usan para entrenar modelos
+- **Google Workspace con Gemini:** incluye protecciones de datos empresariales
+- **ChatGPT gratuito o Plus personal:** NO tiene DPA; los datos pueden usarse para entrenar modelos
+
+> **Regla práctica:** La versión gratuita de ChatGPT NO es adecuada para tratar datos personales de clientes o empleados. Siempre usa versiones empresariales con DPA firmado.
+
+**Los derechos de los interesados en el contexto de la IA**
+
+- **Derecho de acceso:** Un cliente puede solicitar qué datos suyos tiene tu empresa y cómo los tratas.
+- **Derecho de supresión ("derecho al olvido"):** Puede pedir que se borren sus datos. Si esos datos se han introducido en un modelo externo sin DPA, ¿puedes garantizar su borrado?
+- **Derecho a no ser objeto de decisiones automatizadas:** Tiene derecho a que no se tomen decisiones significativas sobre él basadas únicamente en tratamiento automatizado sin intervención humana.
+
+---
+
+**Ejercicio Práctico**
+
+*Objetivo:* Identificar y corregir posibles infracciones RGPD en el uso de IA.
+
+Lee los siguientes escenarios y determina si existe infracción. Si existe, propón cómo corregirla:
+
+1. La responsable de ventas exporta el listado completo de clientes (nombre, email, teléfono, historial de compras) y lo sube a ChatGPT Plus personal para que genere un análisis de patrones de compra.
+
+2. El departamento de RRHH usa Microsoft Copilot con licencia M365 corporativa y DPA firmado para generar resúmenes de evaluaciones de desempeño de empleados, con nombres reales.
+
+3. Una empresa de marketing crea un agente de IA con datos de comportamiento web de sus usuarios para personalizar emails. Los usuarios no han sido informados en la política de privacidad.
+
+4. Un administrativo usa Claude.ai con cuenta corporativa de pago (con DPA) para redactar un contrato, pegando solo cláusulas genéricas sin datos personales de ninguna parte.
+
+*Para cada caso:* indica si hay infracción, qué principio del RGPD se infringe y cómo lo solucionarías.
+
+---
+
+**Cuestionario de Autoevaluación**
+
+**Pregunta 1:** Necesitas usar ChatGPT para analizar reclamaciones de clientes. Los documentos incluyen nombre, email y descripción del problema. ¿Cuál es el enfoque correcto?
+a) Subir los documentos a ChatGPT Plus, que al ser de pago cumple el RGPD
+b) Anonimizar los datos (eliminar nombre y email) antes de introducirlos en la IA
+c) Pedir permiso a cada cliente individualmente antes de procesar su reclamación con IA
+d) Solo se puede hacer si la empresa tiene certificación ISO 27001
+
+**Respuesta correcta: b.** La anonimización elimina el problema en origen: sin datos personales, no hay infracción RGPD. ChatGPT Plus personal no tiene DPA empresarial adecuado para datos personales.
+
+**Pregunta 2:** ¿Cuál de las siguientes herramientas de IA es adecuada para tratar datos personales de empleados en una empresa?
+a) ChatGPT gratuito (versión web)
+b) ChatGPT Plus (cuenta personal)
+c) Microsoft Copilot con licencia M365 empresarial y DPA firmado
+d) Cualquier herramienta de IA si usas una VPN
+
+**Respuesta correcta: c.** Solo las herramientas con Acuerdo de Procesamiento de Datos (DPA) firmado son apropiadas para datos personales en el entorno empresarial.
+
+**Pregunta 3:** Un cliente solicita el "derecho al olvido". Tu empresa ha usado ChatGPT gratuito para analizar documentos con sus datos. ¿Cuál es el problema principal?
+a) No hay problema, los datos en ChatGPT se borran automáticamente a los 30 días
+b) OpenAI puede haber usado esos datos para entrenar su modelo, haciendo prácticamente imposible garantizar el borrado completo
+c) El cliente no tiene derecho al olvido si sus datos se han tratado con fines legítimos de negocio
+d) Solo es un problema si se introdujeron más de 100 registros del cliente
+
+**Respuesta correcta: b.** Si los datos se han incorporado al entrenamiento de un modelo, es técnicamente imposible garantizar su eliminación completa, lo que hace inviable cumplir con el derecho al olvido.
+
+**Pregunta 4:** ¿Qué significa "pseudonimización" de datos en el contexto del RGPD?
+a) Eliminar todos los datos personales de forma permanente e irreversible
+b) Traducir los datos a otro idioma para que no sean reconocibles
+c) Sustituir datos identificativos por un código o alias, manteniendo una clave que permite la re-identificación
+d) Cifrar los datos con contraseña para que solo acceda el responsable del tratamiento
+
+**Respuesta correcta: c.** La pseudonimización sustituye datos identificativos por códigos, pero existe una clave de reversión. Los datos pseudonimizados siguen siendo datos personales bajo el RGPD. La anonimización (irreversible) sí elimina la condición de dato personal.`,
+      },
+      {
+        title: '2.3. Uso Ético y Responsable de la IA en la Empresa',
+        content: `En 2018, Amazon tuvo que abandonar un sistema de IA desarrollado durante cuatro años para filtrar currículums. El problema: el sistema había aprendido con datos históricos de contratación donde la gran mayoría de empleados técnicos eran hombres. Resultado: el modelo penalizaba automáticamente los CVs que incluían palabras como "femenino" o el nombre de colegios exclusivos de mujeres. Amazon lo detectó, intentó corregirlo, no pudo garantizar la neutralidad y desactivó el sistema.
+
+Este caso ilustra algo fundamental: la IA no es neutral. Aprende de los datos que le damos, y esos datos reflejan los sesgos del mundo real. El uso ético de la IA no es solo una cuestión filosófica; es un requisito práctico para que los sistemas funcionen bien y para que tu empresa no incurra en discriminación involuntaria.
+
+**¿Qué es el sesgo algorítmico y cómo surge?**
+
+El sesgo algorítmico ocurre cuando un sistema de IA produce resultados sistemáticamente injustos para determinados grupos de personas. Sus causas más comunes:
+
+*Sesgo en los datos de entrenamiento:*
+Si el modelo aprende de datos históricos sesgados, reproducirá esos sesgos. Si en tu empresa la mayoría de personas promovidas han sido hombres de entre 30 y 45 años, un sistema de IA entrenado con esos datos tenderá a recomendar perfiles similares.
+
+*Sesgo de representación:*
+Cuando ciertos grupos están infrarrepresentados en los datos. Un sistema de reconocimiento facial entrenado principalmente con rostros de personas blancas tendrá peor desempeño con otros grupos.
+
+*Sesgo de retroalimentación:*
+El sistema toma decisiones que afectan al mundo real, ese mundo genera nuevos datos, y el sistema se retroalimenta reforzando sus propios sesgos.
+
+**El principio de supervisión humana**
+
+Uno de los pilares de la IA ética es que las decisiones importantes sobre personas deben tener supervisión humana. La IA asiste, pero un humano responsable revisa, valida y asume la responsabilidad final.
+
+En la práctica:
+- **En selección de personal:** La IA puede ordenar y pre-filtrar CVs, pero una persona debe revisar la lista antes de decidir quién pasa a la siguiente fase
+- **En atención al cliente:** La IA puede gestionar consultas simples, pero casos complejos o quejas serias deben escalar a un agente humano
+- **En análisis de riesgos:** La IA puede señalar anomalías o calcular probabilidades, pero la decisión final la toma una persona
+- **En comunicaciones:** Los textos generados por IA deben ser revisados antes de enviarlos en nombre de la empresa
+
+**Transparencia: cuándo y cómo comunicar el uso de IA**
+
+Situaciones en las que debes ser transparente sobre el uso de IA:
+- **Con clientes:** Si un chatbot gestiona sus consultas, deben saberlo. Si un sistema de IA calcula su perfil de riesgo, también.
+- **Con candidatos a empleo:** Si usas IA en el proceso de selección, los candidatos deben ser informados.
+- **En documentos y comunicaciones:** Si un informe ha sido generado con asistencia significativa de IA, conviene indicarlo en contextos donde la autoría importa.
+- **Internamente:** Tu equipo debe saber qué procesos están siendo automatizados o asistidos por IA.
+
+**Cuándo NO usar IA**
+
+Tan importante como saber usar la IA es saber cuándo no usarla:
+- **Decisiones con alto impacto emocional:** comunicar un despido, dar malas noticias a un cliente, gestionar una queja grave. El contacto humano es insustituible.
+- **Información altamente confidencial:** secretos comerciales, estrategia corporativa, datos de due diligence.
+- **Contextos donde la autoría es crítica:** documentos legales, contratos, comunicados ante organismos reguladores.
+- **Cuando los datos no están verificados:** la IA amplifica errores; si los datos de entrada son incorrectos, el output será incorrecto con más confianza.
+
+**Cómo crear una política de IA para tu empresa**
+
+Una política interna de uso de IA no necesita ser un documento jurídico extenso. Puede ser una guía práctica que responda a:
+
+1. ¿Qué herramientas de IA están aprobadas para uso corporativo?
+2. ¿Qué tipos de datos NO deben introducirse en herramientas de IA externas?
+3. ¿Qué procesos requieren supervisión humana obligatoria?
+4. ¿Quién es el responsable de supervisar el uso de IA en la empresa?
+5. ¿Cómo se informa a clientes y empleados sobre el uso de IA?
+6. ¿Cómo se reportan incidentes o errores detectados en sistemas de IA?
+
+> **Consejo Práctico:** Si en tu empresa no existe política de IA, puedes proponer crear una. Empieza por un documento de 1-2 páginas con las preguntas anteriores respondidas para tu área de trabajo.
+
+---
+
+**Ejercicio Práctico**
+
+*Objetivo:* Elaborar una mini-política de uso de IA para un departamento concreto.
+
+Elige uno de los siguientes departamentos y redacta una política de no más de una página que responda a los 6 puntos anteriores:
+
+- **Departamento de Recursos Humanos:** usa IA para selección de personal y evaluaciones
+- **Departamento de Atención al Cliente:** ha implementado un chatbot y usa IA para analizar tickets
+- **Departamento Financiero-Administrativo:** usa IA para procesar facturas y generar informes
+
+*Instrucciones:*
+1. Identifica los 3 riesgos principales del uso de IA en ese departamento
+2. Propón qué herramientas se aprueban y cuáles quedan prohibidas
+3. Define en qué decisiones la supervisión humana es obligatoria
+4. Indica cómo se informará a empleados o clientes sobre el uso de IA
+
+*Reflexión final:* ¿Qué cambio concreto implementarías esta semana en tu trabajo para usar la IA de forma más ética?
+
+---
+
+**Cuestionario de Autoevaluación**
+
+**Pregunta 1:** Un sistema de IA para calcular la probabilidad de impago muestra sistemáticamente peores puntuaciones para solicitantes de determinados códigos postales que coinciden con barrios de población mayoritariamente inmigrante. ¿Qué tipo de problema es este?
+a) Un fallo técnico puntual que se corrige actualizando el software
+b) Sesgo algorítmico derivado posiblemente de datos históricos que reflejan desigualdades socioeconómicas
+c) Un comportamiento correcto del modelo, ya que los datos estadísticos respaldan la predicción
+d) Un problema exclusivo de los modelos de IA de código abierto
+
+**Respuesta correcta: b.** Aunque las estadísticas históricas puedan estar sesgadas por factores socioeconómicos, un sistema de IA que perpetúa y amplifica esas desigualdades incurre en sesgo algorítmico. Los datos no justifican el uso de variables que correlacionan con el origen étnico.
+
+**Pregunta 2:** Tu empresa usa IA para generar propuestas comerciales. Un compañero propone enviarlas directamente sin revisión para ahorrar tiempo. ¿Cuál es el riesgo principal?
+a) Las propuestas generadas por IA son siempre inferiores a las escritas por humanos
+b) El cliente podría detectar que es IA y molestarse
+c) La IA puede incluir datos incorrectos, precios desactualizados o compromisos no validados, y la empresa asume la responsabilidad de lo que firma
+d) Los sistemas de IA no pueden generar documentos con valor legal
+
+**Respuesta correcta: c.** Una propuesta con un precio incorrecto o un compromiso que la empresa no puede cumplir genera responsabilidades contractuales. La revisión humana es obligatoria antes de enviar.
+
+**Pregunta 3:** ¿Cuál de los siguientes es un ejemplo de buena práctica en transparencia del uso de IA?
+a) Usar IA para redactar todos los correos comerciales sin mencionarlo al cliente, ya que el resultado es indistinguible
+b) Informar en la política de privacidad y en la primera interacción que el servicio de chat usa IA generativa
+c) Usar IA internamente para todo, pero afirmar en la web que toda la atención es personalizada y humana
+d) La transparencia solo es necesaria con clientes, no con empleados ni candidatos
+
+**Respuesta correcta: b.** La transparencia implica informar proactivamente, no solo cuando te lo preguntan. Informar en la política de privacidad y en la primera interacción es la práctica correcta alineada con el AI Act y el RGPD.
+
+**Pregunta 4:** ¿En cuál de estas situaciones sería menos apropiado usar IA generativa para redactar la comunicación?
+a) Borrador de un correo de confirmación de pedido para un cliente
+b) Primer borrador de una oferta comercial estándar
+c) Comunicación a un empleado informándole de su despido
+d) Respuesta a una consulta frecuente sobre horarios de atención
+
+**Respuesta correcta: c.** Las comunicaciones con alto impacto emocional que afectan directamente a la vida de las personas requieren contacto humano genuino. Usar IA para redactarlas puede resultar frío e impersonal.`,
+      },
+    ],
+  },
+  {
+    id: 3,
     slug: 'gestion-documental-comunicacion',
     title: 'IA aplicada a la Gestión Documental y Comunicación',
     level: 'Nivel Intermedio',
@@ -1156,7 +1493,7 @@ d) Una invitacion a una cena de empresa
     ],
   },
   {
-    id: 3,
+    id: 4,
     slug: 'analisis-datos-reportes',
     title: 'Análisis de Datos y Reportes SIN Programar',
     level: 'Nivel Intermedio-Avanzado',
@@ -1915,7 +2252,7 @@ La opción correcta es la b. El R cuadrado de 0,85 indica que el modelo lineal e
     ],
   },
   {
-    id: 4,
+    id: 5,
     slug: 'automatizacion-procesos-ia',
     title: 'Automatización de Procesos con IA',
     level: 'Nivel Avanzado',
@@ -2279,7 +2616,7 @@ d) Probar el GPT con preguntas reales antes de compartirlo
     ],
   },
   {
-    id: 5,
+    id: 6,
     slug: 'creacion-contenido-multimedia',
     title: 'Creación de Contenido y Herramientas Multimedia',
     level: 'Nivel Experto',
@@ -2606,7 +2943,355 @@ d) Traduce los comentarios de los usuarios
     ],
   },
   {
-    id: 6,
+    id: 7,
+    slug: 'finanzas-administrativas-ia',
+    title: 'Finanzas Administrativas con IA',
+    level: 'Nivel Avanzado',
+    levelKey: 'avanzado',
+    icon: TrendingUp,
+    objective: 'Aplicar herramientas de IA para automatizar procesos financieros administrativos: gestión de facturas, conciliaciones, detección de anomalías e informes, sin necesidad de programar.',
+    description: 'La gestión financiera administrativa está llena de tareas repetitivas y propensas a errores humanos. Este módulo te enseña a usar la IA para procesar facturas de forma inteligente, detectar anomalías en gastos y conciliaciones, y generar informes financieros claros en una fracción del tiempo habitual.',
+    duration: '4 semanas',
+    sections: [
+      {
+        title: '7.1. Gestión de Facturas y Documentos Financieros con IA',
+        content: `El procesamiento manual de facturas es uno de los procesos más costosos y propensos a errores en cualquier departamento administrativo. Un estudio de IOFM estima que el coste de procesar una factura en papel de forma manual oscila entre 12 y 30 euros, incluyendo tiempo de introducción de datos, verificación, aprobación y archivo. Con IA, ese coste puede reducirse a menos de 3 euros por factura, con mayor precisión y trazabilidad.
+
+Imagina que recibes 200 facturas al mes de diferentes proveedores, en distintos formatos (PDF, Word, email, papel escaneado). Cada una tiene una estructura diferente: el proveedor A pone el número de factura arriba a la derecha, el proveedor B lo pone abajo a la izquierda, el proveedor C usa plantillas en inglés. Manualmente, introducir todos los datos en el ERP lleva horas. Con IA de extracción de documentos, el proceso se automatiza en minutos.
+
+**¿Cómo funciona la IA en el procesamiento de facturas?**
+
+Los sistemas modernos de procesamiento inteligente de documentos (IDP) combinan varias tecnologías:
+
+*OCR Inteligente (Reconocimiento Óptico de Caracteres):*
+No se limita a "leer" texto; entiende el contexto y la estructura del documento. Identifica que "123,45 €" en el campo inferior derecho es el total de la factura, aunque ese campo no esté etiquetado como "total".
+
+*Extracción de campos clave:*
+El sistema extrae automáticamente: número de factura, fecha, proveedor, CIF/NIF, líneas de detalle (descripción, cantidad, precio unitario, importe), base imponible, IVA, total y condiciones de pago.
+
+*Clasificación automática:*
+Identifica el tipo de documento (factura, albarán, nota de crédito, presupuesto) y lo enruta al flujo de trabajo correspondiente.
+
+*Validación cruzada:*
+Compara los datos extraídos con la orden de compra y el albarán correspondiente (proceso de 3 vías: PO-GRN-Invoice matching) para verificar que cantidades, precios y proveedor coincidan.
+
+**Herramientas prácticas sin necesidad de programar**
+
+*Para empresas con Microsoft 365:*
+- **Microsoft Syntex:** extrae datos de facturas directamente en SharePoint usando modelos preentrenados. No requiere código.
+- **Power Automate con AI Builder:** crea flujos que procesan facturas recibidas por email, extraen campos automáticamente y los vuelcan en una hoja de Excel o en el ERP.
+- **Copilot en Excel:** permite analizar lotes de facturas en formato Excel, identificar discrepancias y generar resúmenes.
+
+*Herramientas especializadas:*
+- **Rossum.ai:** plataforma de extracción de facturas con interfaz visual, sin código, alta precisión en documentos complejos.
+- **Docsumo:** extrae datos de facturas, recibos y documentos financieros con una interfaz sencilla.
+- **Mindee:** API de extracción de facturas, también disponible con interfaz no-code.
+- **Klippa:** solución de captura inteligente de documentos con integración con ERPs habituales.
+
+*Usando ChatGPT o Claude directamente (para volúmenes pequeños):*
+Para procesar un lote reducido de facturas, puedes subir los PDFs a ChatGPT Enterprise o Claude y pedir que extraiga en formato tabla: número de factura, proveedor, fecha, base imponible, IVA, total. El resultado puede copiarse directamente a Excel.
+
+**Flujo de trabajo recomendado**
+
+1. **Recepción:** las facturas llegan por email a una dirección dedicada (ej: facturas@empresa.com)
+2. **Extracción automática:** el sistema de IA lee el PDF y extrae los campos clave
+3. **Validación:** el sistema compara con la orden de compra y albarán; señala discrepancias
+4. **Revisión humana:** solo las facturas con discrepancias o datos dudosos van al revisor humano (en lugar de todas)
+5. **Aprobación y contabilización:** las facturas validadas se envían al ERP para contabilización
+6. **Archivo:** el documento queda indexado y buscable por cualquier campo
+
+> **Dato clave:** Con un sistema de este tipo, el revisor humano solo interviene en el 15-20% de las facturas (las que tienen discrepancias), en lugar del 100%. El tiempo de procesamiento pasa de días a horas.
+
+**Gestión de albaranes y órdenes de compra**
+
+El mismo enfoque aplica a albaranes (notas de entrega) y órdenes de compra. La IA puede:
+- Extraer automáticamente los datos del albarán y cruzarlos con la orden de compra
+- Detectar diferencias en cantidades recibidas vs. pedidas
+- Generar alertas cuando hay discrepancias antes de aprobar la factura correspondiente
+
+---
+
+**Ejercicio Práctico**
+
+*Objetivo:* Diseñar un flujo de procesamiento de facturas con IA para tu empresa.
+
+*Situación:* Tu empresa recibe aproximadamente 150 facturas mensuales de 40 proveedores distintos, en formatos PDF y Excel. Actualmente, una administrativa dedica 3 horas al día a introducir los datos manualmente en el ERP.
+
+*Tareas:*
+1. Describe el flujo de trabajo actual (paso a paso) y sus principales puntos de dolor
+2. Diseña un flujo de trabajo mejorado con IA indicando en qué paso se automatiza qué tarea
+3. Identifica qué herramienta de las mencionadas encajaría mejor con el ecosistema de tu empresa (Microsoft 365, Google Workspace, sistema standalone)
+4. Estima el ahorro de tiempo mensual si la IA procesa automáticamente el 80% de las facturas sin intervención humana
+
+*Reflexión:* ¿Qué resistencias o riesgos prevés en la implantación? ¿Cómo los gestionarías?
+
+---
+
+**Cuestionario de Autoevaluación**
+
+**Pregunta 1:** ¿Qué es el "proceso de 3 vías" (3-way matching) en el procesamiento de facturas?
+a) Revisar una factura tres veces antes de aprobarla para garantizar la precisión
+b) La validación cruzada entre orden de compra, albarán de entrega y factura del proveedor
+c) El proceso por el que tres personas distintas aprueban cada factura
+d) La comparación de la factura actual con las tres facturas anteriores del mismo proveedor
+
+**Respuesta correcta: b.** El 3-way matching compara la orden de compra (lo que se pidió), el albarán (lo que se recibió) y la factura (lo que el proveedor cobra). Es la validación clave para detectar discrepancias antes de pagar.
+
+**Pregunta 2:** Una empresa quiere implementar extracción automática de datos de facturas con Microsoft 365. ¿Qué herramienta es más adecuada sin necesidad de programar?
+a) Azure Machine Learning Studio
+b) Power Automate con AI Builder o Microsoft Syntex
+c) Microsoft Access con macros de Visual Basic
+d) Bing Chat Enterprise
+
+**Respuesta correcta: b.** Power Automate con AI Builder y Microsoft Syntex son las herramientas no-code de Microsoft 365 diseñadas específicamente para extracción inteligente de documentos e integración con flujos de trabajo.
+
+**Pregunta 3:** ¿Cuál es el principal beneficio de implementar IA en el procesamiento de facturas para el equipo administrativo?
+a) Eliminar completamente la necesidad de revisión humana en todas las facturas
+b) Concentrar la intervención humana solo en las facturas con discrepancias o datos dudosos
+c) Reducir el número de proveedores de la empresa
+d) Automatizar también la negociación de condiciones de pago con proveedores
+
+**Respuesta correcta: b.** El mayor beneficio no es eliminar al humano, sino focalizarlo donde añade valor: revisar excepciones y casos complejos, en lugar de introducir datos repetitivos. La IA procesa el volumen; el humano gestiona las excepciones.
+
+**Pregunta 4:** Al usar ChatGPT Enterprise para extraer datos de facturas en PDF, ¿qué precaución es más importante desde el punto de vista del RGPD?
+a) Usar solo facturas con importe inferior a 1.000 euros
+b) Verificar que existe un DPA (Acuerdo de Procesamiento de Datos) con OpenAI para el uso empresarial
+c) Convertir las facturas a formato Word antes de subirlas
+d) Procesar máximo 10 facturas por sesión para no sobrecargar el sistema
+
+**Respuesta correcta: b.** Las facturas contienen datos personales (nombre y CIF de proveedores y clientes). Para tratarlos con herramientas de IA externas es obligatorio tener un DPA firmado. ChatGPT Enterprise incluye este acuerdo; las versiones de consumo no.`,
+      },
+      {
+        title: '7.2. Conciliaciones, Detección de Anomalías y Control de Gastos',
+        content: `La conciliación bancaria es una de las tareas más tediosas y críticas del departamento administrativo-financiero. Consiste en comparar el extracto bancario con los registros contables internos para asegurarse de que coinciden, identificar transacciones no registradas y detectar posibles errores o fraudes. Una conciliación mensual manual para una empresa de tamaño medio puede llevar entre 4 y 8 horas. Con IA, ese tiempo puede reducirse en un 70-80%.
+
+Pero el valor de la IA en este área va más allá de la velocidad. Los algoritmos de detección de anomalías pueden identificar patrones sospechosos que un humano, revisando cientos de transacciones, podría pasar por alto fácilmente.
+
+**Conciliación bancaria asistida por IA**
+
+El proceso de conciliación tradicional implica comparar, línea por línea, el extracto bancario con el libro mayor contable. Los errores más comunes que la IA puede detectar automáticamente:
+
+*Duplicados:* el mismo pago registrado dos veces con diferentes referencias o fechas ligeramente distintas.
+*Errores de importe:* un pago registrado como 1.250,00 € cuando el extracto dice 1.520,00 € (transposición de dígitos).
+*Transacciones no contabilizadas:* comisiones bancarias, intereses o cargos automáticos que aparecen en el extracto pero no en la contabilidad.
+*Diferencias de fecha:* pagos registrados en un período contable diferente al que aparece en el extracto.
+
+**Herramientas para conciliación con IA**
+
+*Microsoft Excel con Copilot:*
+Con Copilot activado en Excel, puedes cargar el extracto bancario en una hoja y el libro mayor en otra, y pedir al asistente que identifique transacciones que no tienen correspondencia entre ambas. También puedes pedirle que clasifique las diferencias por tipo y genere un informe resumen.
+
+Ejemplo de prompt efectivo para Excel Copilot:
+"Tengo dos tablas: 'Extracto_Banco' con columnas Fecha, Referencia, Importe y 'Libro_Mayor' con columnas Fecha_Registro, Concepto, Importe. Identifica todas las filas de Extracto_Banco que no tienen una coincidencia exacta por importe en Libro_Mayor, y agrúpalas por tipo de diferencia (importe distinto, sin correspondencia, diferencia de fecha)."
+
+*Power BI con IA integrada:*
+Permite crear dashboards de conciliación que se actualizan automáticamente y señalan visualmente las partidas en discrepancia. El módulo de "Anomaly Detection" de Power BI identifica valores atípicos en series temporales de forma automática.
+
+*Herramientas especializadas:*
+- **BlackLine:** plataforma líder de automatización de cierres financieros y conciliaciones, usada por medianas y grandes empresas.
+- **Trintech:** automatización de conciliaciones con IA para detección de partidas abiertas.
+- **Xero + Hubdoc (para pymes):** conciliación automática con extracción de documentos integrada.
+
+**Detección de anomalías en gastos**
+
+Más allá de la conciliación, la IA puede analizar patrones en los gastos de la empresa para detectar situaciones que merecen revisión:
+
+*Anomalías de importe:*
+Un proveedor que habitualmente factura entre 500 y 800 euros al mes de repente presenta una factura de 4.200 euros sin una orden de compra correspondiente.
+
+*Anomalías de frecuencia:*
+Un proveedor que facturaba mensualmente empieza a facturar semanalmente sin cambio aparente en el contrato.
+
+*Gastos de empleados:*
+En los informes de gastos, la IA puede detectar: gastos duplicados (mismo importe, misma fecha, distintas notas de gasto), gastos fuera de política (categorías no autorizadas, importes superiores al límite diario), patrones sospechosos (siempre el último día del período contable, siempre justo por debajo del límite de aprobación).
+
+*Proveedores fantasma:*
+Compara CIFs y datos bancarios de proveedores para detectar duplicados o similitudes sospechosas con empleados de la empresa.
+
+**Control de gastos con IA: flujo práctico**
+
+1. **Captura:** los empleados fotografían los tickets con una app (Expensya, Rydoo, SAP Concur) que extrae los datos automáticamente
+2. **Clasificación automática:** la IA clasifica el gasto por categoría (transporte, alojamiento, manutención, material de oficina)
+3. **Validación de política:** el sistema verifica automáticamente si el gasto cumple la política de la empresa
+4. **Detección de anomalías:** marca gastos sospechosos para revisión manual
+5. **Aprobación:** los gastos que cumplen la política se aprueban automáticamente; los marcados van al manager
+6. **Contabilización:** los gastos aprobados se vuelcan automáticamente en el ERP
+
+---
+
+**Ejercicio Práctico**
+
+*Objetivo:* Usar IA para analizar un conjunto de transacciones y detectar anomalías.
+
+*Situación:* Descarga o crea en Excel una tabla con 50 transacciones ficticias de una empresa, incluyendo: fecha, proveedor, concepto, importe, categoría y estado (pagado/pendiente). Incluye deliberadamente estas anomalías:
+- 2 transacciones duplicadas (mismo proveedor, mismo importe, fechas consecutivas)
+- 1 importe excepcionalmente alto para un proveedor habitual (5x su media)
+- 3 gastos sin categoría asignada
+- 1 proveedor con el mismo CIF que otro proveedor ya registrado con nombre diferente
+
+*Tareas:*
+1. Sube el Excel a ChatGPT Enterprise o usa Copilot en Excel y pide que identifique anomalías
+2. Evalúa cuántas de las 7 anomalías ha detectado la IA
+3. Para las que no ha detectado, analiza por qué (¿era el contexto insuficiente? ¿faltaba información comparativa?)
+4. Redacta un prompt mejorado que ayude a la IA a detectar las anomalías que se le escaparon
+
+*Reflexión:* ¿Qué limitaciones tiene la IA para detectar fraudes más sofisticados? ¿Qué elementos de contexto necesitaría para mejorar?
+
+---
+
+**Cuestionario de Autoevaluación**
+
+**Pregunta 1:** ¿Cuál es el mayor beneficio de usar IA para la conciliación bancaria respecto al proceso manual?
+a) La IA puede acceder directamente a los sistemas bancarios y contabilizar automáticamente
+b) Reduce el tiempo de procesamiento y detecta tipos de errores (duplicados, transposiciones) que son difíciles de identificar manualmente en grandes volúmenes
+c) Elimina la necesidad de tener un contable en la empresa
+d) La IA certifica que las cuentas están correctas, lo que equivale a una auditoría externa
+
+**Respuesta correcta: b.** El valor principal es la combinación de velocidad y la capacidad de detectar patrones de error que el ojo humano fácilmente pasa por alto al revisar cientos de transacciones.
+
+**Pregunta 2:** Un empleado presenta siempre sus notas de gastos con importes de 49,90 € (el límite de aprobación automática es 50 €). ¿Qué tipo de anomalía detectaría un sistema de IA?
+a) Error de categorización, ya que el importe está mal clasificado
+b) Anomalía de patrón: gastos sistemáticamente justo por debajo del umbral de aprobación, posible indicador de elusión de controles
+c) Duplicado, ya que el mismo importe se repite muchas veces
+d) No es una anomalía, es un comportamiento completamente normal
+
+**Respuesta correcta: b.** Los sistemas de detección de anomalías aprenden a identificar patrones de comportamiento sospechoso, como la tendencia a mantenerse sistemáticamente por debajo de umbrales de control. Esto se conoce como "structuring" en el ámbito del cumplimiento normativo.
+
+**Pregunta 3:** ¿Qué herramienta de Microsoft 365 permite detectar anomalías en series temporales de datos financieros de forma visual y sin código?
+a) Microsoft Access
+b) Power BI con el módulo de Anomaly Detection
+c) Microsoft Forms
+d) SharePoint Analytics
+
+**Respuesta correcta: b.** Power BI incluye un módulo nativo de detección de anomalías que analiza series temporales e identifica valores atípicos de forma visual, sin necesidad de programar modelos estadísticos.
+
+**Pregunta 4:** Al implementar IA para el control de gastos de empleados, ¿cuál es la práctica más importante desde el punto de vista del RGPD y la ética laboral?
+a) Usar la IA para monitorizar en tiempo real todos los movimientos de la tarjeta de empresa del empleado
+b) Informar a los empleados de qué datos se recopilan, cómo se analizan y con qué finalidad, y asegurar que la supervisión humana revisa los casos marcados antes de tomar decisiones
+c) Implementar el sistema sin comunicarlo para evitar que los empleados ajusten su comportamiento
+d) Aplicar sanciones automáticas basadas solo en las anomalías detectadas por la IA sin revisión humana
+
+**Respuesta correcta: b.** La transparencia con los empleados y la supervisión humana en las decisiones que les afectan son obligatorias tanto por el RGPD (tratamiento de datos laborales) como por el AI Act (sistemas de evaluación de empleados) y los principios básicos de ética laboral.`,
+      },
+      {
+        title: '7.3. Previsiones Financieras e Informes Asistidos por IA',
+        content: `Uno de los trabajos más valorados del departamento financiero-administrativo es la capacidad de anticipar: ¿tendremos liquidez suficiente el próximo trimestre? ¿Estamos en línea con el presupuesto? ¿Dónde están las desviaciones más importantes y cuál es su causa? Históricamente, responder estas preguntas requería horas de trabajo en Excel, conocimientos avanzados de análisis de datos y la capacidad de convertir números en narrativa comprensible para dirección.
+
+La IA no elimina este trabajo, pero lo transforma radicalmente: automatiza las partes mecánicas (extraer datos, construir tablas, calcular variaciones) y potencia las partes de valor añadido (interpretación, narrativa, identificación de patrones relevantes).
+
+**Previsión de tesorería con IA**
+
+La previsión de tesorería (cash flow forecasting) consiste en estimar las entradas y salidas de dinero en un horizonte temporal futuro (semanas, meses, trimestres). Es fundamental para anticipar necesidades de financiación o planificar inversiones.
+
+Con IA, el proceso mejora en varias dimensiones:
+
+*Automatización de la recogida de datos:*
+En lugar de actualizar manualmente la hoja de previsión con facturas pendientes de cobro, compromisos de pago, nóminas y otros conceptos, los sistemas conectados al ERP actualizan automáticamente la previsión con los datos más recientes.
+
+*Aplicación de patrones históricos:*
+La IA analiza el historial de cobros de cada cliente (¿cuántos días tarda habitualmente en pagar? ¿qué porcentaje de sus facturas se pagan puntualmente?) y ajusta la previsión de ingresos en función de probabilidades reales, no de los plazos nominales del contrato.
+
+*Escenarios alternativos:*
+Los modelos de IA permiten generar fácilmente escenarios "what-if": ¿qué pasaría con la tesorería si el cliente A retrasa su pago 30 días? ¿Y si conseguimos el proyecto B en el Q3?
+
+**Copilot en Excel para análisis financiero**
+
+Con Microsoft 365 Copilot activado en Excel, puedes hacer análisis financieros sofisticados en lenguaje natural. Algunos ejemplos de prompts efectivos:
+
+Para análisis de desviaciones presupuestarias:
+"Compara las columnas Presupuesto y Real para cada categoría de gasto. Calcula la desviación en valor absoluto y en porcentaje. Resalta en rojo las categorías con desviación superior al 15% y genera un resumen de las 3 categorías con mayor desviación."
+
+Para previsión de tesorería:
+"Basándote en el historial de cobros de los últimos 12 meses en la tabla Cobros_Historico, calcula el número promedio de días de pago por cliente y aplícalo a las facturas pendientes en Facturas_Pendientes para generar una previsión de cobros a 90 días."
+
+Para análisis de rentabilidad:
+"Agrupa las ventas por línea de producto y calcula el margen bruto de cada una. Muestra los resultados en un gráfico de barras ordenado de mayor a menor margen e identifica los productos con margen inferior al 20%."
+
+**Generación de informes financieros narrativos**
+
+Una de las aplicaciones más impactantes de la IA generativa en finanzas administrativas es la generación de narrativa financiera: transformar tablas de números en texto comprensible para personas sin formación financiera (directores generales, consejos de administración, departamentos comerciales).
+
+El proceso es sencillo:
+1. Preparas la tabla de resultados (presupuesto vs. real, balance, cuenta de resultados)
+2. Pegas los datos en ChatGPT Enterprise o Claude y pides que genere el comentario de gestión
+
+Ejemplo de prompt:
+"Eres el director financiero de una empresa de servicios. Aquí tienes la cuenta de resultados del Q1 2026 comparada con el presupuesto y con el Q1 2025 [tabla]. Redacta un comentario de gestión ejecutivo de 3-4 párrafos que explique los principales resultados, las desviaciones más relevantes y su causa probable, y las acciones correctoras propuestas. El tono debe ser profesional pero comprensible para un consejo de administración sin perfil financiero."
+
+**Automatización del cierre mensual**
+
+El cierre contable mensual implica una secuencia de tareas repetitivas que pueden orquestarse con IA:
+- Extracción automática de saldos del ERP
+- Validación de que todos los asientos obligatorios están realizados
+- Generación automática de los estados financieros preliminares
+- Detección de variaciones inusuales respecto al mes anterior
+- Generación del borrador del informe de gestión mensual
+
+Con herramientas como Power Automate + Copilot + plantillas de Excel, este flujo puede reducir el tiempo de cierre de 3-4 días a 1-2 días.
+
+> **Consejo Práctico:** Empieza por automatizar un solo informe recurrente que generes cada mes (por ejemplo, el informe de ventas por categoría). Documenta el proceso actual, crea una plantilla en Excel y un prompt reutilizable para la narrativa. Una vez validado, replica el enfoque para otros informes.
+
+---
+
+**Ejercicio Práctico**
+
+*Objetivo:* Generar un informe de gestión financiero con asistencia de IA.
+
+*Situación:* Tienes los datos del cierre de abril de tu empresa (o datos ficticios similares):
+- Ingresos: 285.000 € (Presupuesto: 310.000 €; Abril anterior: 272.000 €)
+- Coste de ventas: 158.000 € (Presupuesto: 168.000 €; Abril anterior: 149.000 €)
+- Gastos de personal: 72.000 € (Presupuesto: 70.000 €; Abril anterior: 68.000 €)
+- Gastos generales: 31.000 € (Presupuesto: 28.000 €; Abril anterior: 24.000 €)
+- EBITDA: 24.000 € (Presupuesto: 44.000 €; Abril anterior: 31.000 €)
+
+*Tareas:*
+1. Calcula las desviaciones en valor absoluto y porcentaje para cada línea
+2. Usa ChatGPT Enterprise o Claude para generar un comentario de gestión ejecutivo de 3-4 párrafos (puedes usar el prompt de ejemplo de esta sección como base)
+3. Ajusta el texto generado para que sea más preciso o refleje mejor el contexto de tu empresa
+4. Añade una sección de "Acciones correctoras propuestas" con al menos 2 medidas concretas
+
+*Reflexión:* ¿En qué aspectos el texto de la IA fue útil y en cuáles necesitó más ajuste humano? ¿Qué información de contexto le faltaba a la IA para mejorar el análisis?
+
+---
+
+**Cuestionario de Autoevaluación**
+
+**Pregunta 1:** ¿Cuál es la principal limitación de usar IA para previsiones de tesorería basadas en patrones históricos?
+a) La IA no puede procesar datos de Excel, solo de bases de datos estructuradas
+b) Los patrones históricos pueden no reflejar cambios recientes en el comportamiento de clientes o en el contexto económico
+c) La IA solo puede hacer previsiones a 30 días, no a horizontes más largos
+d) Las previsiones de IA requieren validación de un auditor externo para ser válidas
+
+**Respuesta correcta: b.** Las previsiones basadas en patrones históricos asumen que el futuro se parecerá al pasado. Cambios en el comportamiento de clientes, el sector o el contexto macroeconómico pueden invalidar el modelo. Por eso la supervisión humana del analista financiero sigue siendo imprescindible.
+
+**Pregunta 2:** Un director general pide un resumen ejecutivo del cierre de marzo. Tienes los datos en Excel. ¿Cuál es el enfoque más eficiente con IA?
+a) Pedir a la IA que acceda directamente al ERP y genere el informe de forma autónoma
+b) Exportar los datos relevantes a Excel, calcular las variaciones clave y usar un LLM con un prompt estructurado para generar la narrativa ejecutiva
+c) Usar la IA solo para corregir la ortografía y el estilo del informe que redactas manualmente
+d) Generar el informe directamente desde Power BI sin intervención humana y enviarlo sin revisión
+
+**Respuesta correcta: b.** El flujo de mayor valor combina la capacidad de cálculo de Excel/Copilot con la capacidad narrativa de un LLM. El humano aporta el contexto de negocio, verifica los números y ajusta la narrativa antes de enviar.
+
+**Pregunta 3:** ¿Qué ventaja ofrece la generación de escenarios "what-if" con IA en la gestión de tesorería?
+a) Elimina la incertidumbre de las previsiones financieras
+b) Permite evaluar rápidamente el impacto de diferentes supuestos (retrasos en cobros, nuevos proyectos, cambios en costes) sin construir manualmente múltiples hojas de cálculo
+c) Garantiza que la previsión será más precisa que la elaborada por un analista financiero senior
+d) Sustituye la necesidad de mantener una reserva de liquidez en la empresa
+
+**Respuesta correcta: b.** El valor del análisis de escenarios con IA no es la precisión absoluta sino la velocidad para explorar múltiples hipótesis y preparar planes de contingencia de forma ágil.
+
+**Pregunta 4:** Al generar narrativa financiera con IA, ¿cuál es el paso más crítico antes de compartir el informe con dirección?
+a) Verificar que el texto no supere las 500 palabras para mantener la atención del lector
+b) Revisar que los datos numéricos en el texto coincidan exactamente con las fuentes originales y que las interpretaciones sean correctas en el contexto real del negocio
+c) Traducir el informe al inglés para que sea más profesional
+d) Pedir a la IA que genere tres versiones del mismo informe y elegir la mejor
+
+**Respuesta correcta: b.** La IA puede generar texto muy convincente pero con datos incorrectos o interpretaciones descontextualizadas. La revisión humana de la precisión numérica y la validez de las interpretaciones es obligatoria antes de presentar cualquier informe financiero generado con IA.`,
+      },
+    ],
+  },
+  {
+    id: 8,
     slug: 'implementacion-consultoria-ia',
     title: 'Implementación, Auditoría y Consultoría de IA en Empresas',
     level: 'Nivel Experto / Líder de Proyecto',

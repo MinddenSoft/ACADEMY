@@ -9,10 +9,12 @@ const programLinks = [
 
 const moduleLinks = [
   { label: 'Alfabetización Digital en IA', to: '/modulo/alfabetizacion-digital-ia' },
+  { label: 'Marco Legal, Ética y Privacidad', to: '/modulo/marco-legal-etica-privacidad' },
   { label: 'Gestión Documental', to: '/modulo/gestion-documental-comunicacion' },
   { label: 'Análisis de Datos y Reportes', to: '/modulo/analisis-datos-reportes' },
   { label: 'Automatización de Procesos', to: '/modulo/automatizacion-procesos-ia' },
   { label: 'Creación de Contenido', to: '/modulo/creacion-contenido-multimedia' },
+  { label: 'Finanzas Administrativas con IA', to: '/modulo/finanzas-administrativas-ia' },
   { label: 'Implementación y Consultoría', to: '/modulo/implementacion-consultoria-ia' },
 ]
 
