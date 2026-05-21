@@ -25,8 +25,8 @@ export default function ObjectivesSection() {
   ]
 
   return (
-    <section id="objetivos" className="relative py-24 lg:py-32 bg-neutral-50 dark:bg-dark-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="objetivos" className="relative py-24 lg:py-32 bg-neutral-50 dark:bg-dark-900 overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 text-sm font-semibold mb-4">Objetivos del Programa</span>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-primary-900 dark:text-white mb-4">

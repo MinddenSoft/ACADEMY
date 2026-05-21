@@ -6,6 +6,8 @@ export default function FinalProjectSection() {
     <section id="proyecto-final" className="relative py-24 lg:py-32 bg-neutral-50 dark:bg-dark-800 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary-300/10 via-primary-500/10 to-primary-700/10 rounded-full blur-3xl" />
+        <div className="absolute -top-20 -right-20 w-[360px] h-[360px] bg-blue-400/25 dark:bg-blue-300/10 rounded-full pointer-events-none" />
+        <div className="absolute -bottom-14 -left-14 w-56 h-56 bg-blue-300/22 dark:bg-blue-200/8 rounded-full pointer-events-none" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
