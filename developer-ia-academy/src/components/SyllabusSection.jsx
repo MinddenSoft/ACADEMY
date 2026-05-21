@@ -15,14 +15,11 @@ export default function SyllabusSection() {
 
   const getFilteredModules = () => {
     if (activeFilter === 'all') return modules
-    const filterMap = {
-      inicial: [1],
-      intermedio: [2, 3],
-      avanzado: [4, 5],
-      experto: [6],
-    }
-    return modules.filter((m) => filterMap[activeFilter]?.includes(m.id))
+    if (activeFilter === 'intermedio') return modules.filter((m) => m.levelKey === 'intermedio' || m.levelKey === 'intermedio-avanzado')
+    return modules.filter((m) => m.levelKey === activeFilter)
   }
+
+  const filtered = getFilteredModules()
 
   return (
     <section id="temario" className="relative py-24 lg:py-32 bg-white dark:bg-dark-900">
@@ -31,7 +28,7 @@ export default function SyllabusSection() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary-700 text-white dark:bg-primary-300 dark:text-primary-900 text-sm font-semibold mb-4">Plan de Estudios Completo</span>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-primary-900 dark:text-white mb-4">
@@ -58,10 +55,16 @@ export default function SyllabusSection() {
           ))}
         </div>
 
-        <div className="space-y-4">
-          {getFilteredModules().map((module) => (
-            <ModuleCard key={module.id} module={module} />
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
+          {filtered.map((module, i) => {
+            const remainder = filtered.length % 3
+            const isWide = remainder === 2 && i >= filtered.length - 2
+            return (
+              <div key={module.id} className={isWide ? 'lg:col-span-3' : 'lg:col-span-2'}>
+                <ModuleCard module={module} index={i} />
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

@@ -2616,7 +2616,7 @@ d) Probar el GPT con preguntas reales antes de compartirlo
     ],
   },
   {
-    id: 6,
+    id: 7,
     slug: 'creacion-contenido-multimedia',
     title: 'Creación de Contenido y Herramientas Multimedia',
     level: 'Nivel Experto',
@@ -2943,7 +2943,7 @@ d) Traduce los comentarios de los usuarios
     ],
   },
   {
-    id: 7,
+    id: 6,
     slug: 'finanzas-administrativas-ia',
     title: 'Finanzas Administrativas con IA',
     level: 'Nivel Avanzado',

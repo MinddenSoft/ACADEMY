@@ -13,8 +13,8 @@ const moduleLinks = [
   { label: 'Gestión Documental', to: '/modulo/gestion-documental-comunicacion' },
   { label: 'Análisis de Datos y Reportes', to: '/modulo/analisis-datos-reportes' },
   { label: 'Automatización de Procesos', to: '/modulo/automatizacion-procesos-ia' },
-  { label: 'Creación de Contenido', to: '/modulo/creacion-contenido-multimedia' },
   { label: 'Finanzas Administrativas con IA', to: '/modulo/finanzas-administrativas-ia' },
+  { label: 'Creación de Contenido', to: '/modulo/creacion-contenido-multimedia' },
   { label: 'Implementación y Consultoría', to: '/modulo/implementacion-consultoria-ia' },
 ]
 
