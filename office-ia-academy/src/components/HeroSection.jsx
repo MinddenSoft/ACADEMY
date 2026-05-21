@@ -42,8 +42,8 @@ export default function HeroSection() {
 
         <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
           {[
-            { value: '6', label: 'Módulos' },
-            { value: '18+', label: 'Lecciones' },
+            { value: '8', label: 'Módulos' },
+            { value: '24+', label: 'Lecciones' },
             { value: '6', label: 'Niveles' },
             { value: '1', label: 'Proyecto Final' },
           ].map((stat) => (

@@ -53,7 +53,7 @@ export default function FinalProjectPage() {
                   <h3 className="font-display font-bold text-lg text-primary-900 dark:text-white">La Solución</h3>
                 </div>
                 <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
-                  Crear un asistente personalizado (GPT) cargado con la normativa de la empresa, conectado a un flujo automatizado (Zapier/Make) que reciba la información, la procese con IA, actualice un reporte en Excel y redacte el correo de respuesta de forma autónoma.
+                  Crear un asistente personalizado (GPT) configurado con la normativa interna y los requisitos legales aplicables (RGPD, AI Act), conectado a un flujo automatizado (Zapier/Make) que procese documentos financieros, genere informes de análisis en Excel y redacte comunicaciones de forma autónoma y conforme a la normativa.
                 </p>
               </div>
             </div>
@@ -63,11 +63,13 @@ export default function FinalProjectPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   { module: 'Módulo 1', skill: 'Prompt Engineering avanzado para configurar el asistente' },
-                  { module: 'Módulo 2', skill: 'Redacción automática de correos de respuesta' },
-                  { module: 'Módulo 3', skill: 'Análisis y reporte de datos en Excel automatizado' },
-                  { module: 'Módulo 4', skill: 'Flujo de automatización con Zapier/Make + GPT personalizado' },
-                  { module: 'Módulo 5', skill: 'Documentación visual del sistema con IA' },
-                  { module: 'Módulo 6', skill: 'Auditoría del proceso y cálculo de ROI' },
+                  { module: 'Módulo 2', skill: 'Configuración del asistente con normativa RGPD y AI Act' },
+                  { module: 'Módulo 3', skill: 'Redacción automática de documentos y correos de respuesta' },
+                  { module: 'Módulo 4', skill: 'Análisis y reporte de datos en Excel automatizado' },
+                  { module: 'Módulo 5', skill: 'Flujo de automatización con Zapier/Make + GPT personalizado' },
+                  { module: 'Módulo 6', skill: 'Procesamiento de facturas y reporting financiero con IA' },
+                  { module: 'Módulo 7', skill: 'Documentación visual del sistema con IA' },
+                  { module: 'Módulo 8', skill: 'Auditoría del proceso e implantación en la empresa' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 rounded-lg bg-white dark:bg-dark-800 border border-neutral-100 dark:border-white/5">
                     <span className="text-xs font-bold text-accent-500 dark:text-accent-400 flex-shrink-0 mt-0.5">{item.module}</span>

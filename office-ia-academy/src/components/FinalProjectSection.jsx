@@ -50,7 +50,7 @@ export default function FinalProjectSection() {
                     <div>
                       <h3 className="font-semibold text-primary-900 dark:text-white mb-1">La Solución</h3>
                       <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
-                        Crear un asistente personalizado (GPT) cargado con la normativa de la empresa, conectado a un flujo automatizado (Zapier/Make) que reciba la información, la procese con IA, actualice un reporte en Excel y redacte el correo de respuesta de forma autónoma.
+                        Crear un asistente personalizado (GPT) configurado con la normativa interna y los requisitos legales aplicables (RGPD, AI Act), conectado a un flujo automatizado (Zapier/Make) que procese documentos financieros, genere informes de análisis en Excel y redacte comunicaciones de forma autónoma y conforme a la normativa.
                       </p>
                     </div>
                   </div>
@@ -59,9 +59,9 @@ export default function FinalProjectSection() {
 
               <div className="lg:w-80 flex-shrink-0">
                 <div className="p-6 rounded-xl bg-primary-50/50 dark:bg-primary-900/20 border border-neutral-100 dark:border-white/10">
-                  <h4 className="font-semibold text-primary-900 dark:text-white mb-4 text-sm uppercase tracking-wider">Tecnologías que integrarás</h4>
+                  <h4 className="font-semibold text-primary-900 dark:text-white mb-4 text-sm uppercase tracking-wider">Módulos y herramientas</h4>
                   <div className="grid grid-cols-2 gap-3">
-                    {['ChatGPT / GPTs', 'Zapier / Make', 'Excel / Sheets', 'Canva IA', 'Gamma App', 'HeyGen / Synthesia'].map((tech) => (
+                    {['ChatGPT / GPTs', 'Zapier / Make', 'Excel / Sheets', 'Canva IA', 'Gamma App', 'HeyGen / Synthesia', 'Marco Legal / RGPD', 'Finanzas con IA'].map((tech) => (
                       <div key={tech} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-white/5 border border-neutral-100 dark:border-white/5 text-neutral-700 dark:text-neutral-300 text-xs font-medium">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent-400" />
                         {tech}
