@@ -85,11 +85,19 @@ function isCode(text) {
     /^[a-z]\s/, /^git\s/, /^import\s/, /^def\s/, /^print\(/, /^plt\./, /^sns\./,
     /^df\[/, /^pd\./, /^np\./, /^class\s/, /^return\s/, /^(if|for|while|elif|else|with|try|except)\s/,
     /^\/\//, /^#\s/, /^\|--\s/, /^[a-z_]+\s*=/, /^from\s/, /^export\s/, /^echo\s/,
+    /^[a-zA-Z_]\w*\.\w+/,
+    /^[)\]\}]/,
+    /^    \w/,
+    /^[A-Z_]\w*\s*=\s*/,
+    /^[A-Z_]\w*,\s*[a-zA-Z_]/,
+    /^(python\d*|pip\d*|conda|source|activate|deactivate|dvc|mlflow|docker|locust|npm|node|npx|yarn|curl|wget|uvicorn|gunicorn|pytest|black|flake8|mypy|poetry|pre-commit|ssh|scp|rsync|make|cargo|go|java|mvn)\s/,
+    /^(ls|cd|rm|mv|cp|mkdir|chmod|cat|grep|find|awk|sed|ps|kill|sudo|apt|brew|yum|which|env|set|unset)\s/,
+    /^\w+\s+[-\/]/, // command with flag (python -m, pip install, dvc add)
   ]
   const codeLines = text.split('\n').filter(l => l.trim())
   if (codeLines.length === 0) return false
   const matched = codeLines.filter(l => codePatterns.some(p => p.test(l.trim())))
-  return matched.length / codeLines.length > 0.5
+  return matched.length / codeLines.length >= 0.5
 }
 
 function parseQuiz(block) {
