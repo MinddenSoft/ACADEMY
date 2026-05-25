@@ -14,6 +14,8 @@ const moduleLinks = [
   { label: 'Deep Learning', to: '/modulo/deep-learning-redes-neuronales' },
   { label: 'LLMs e IA Generativa', to: '/modulo/llms-genai-avanzado' },
   { label: 'MLOps y Producción', to: '/modulo/mlops-ingenieria-produccion' },
+  { label: 'Ingeniería de Datos', to: '/modulo/ingenieria-datos-ia-escala' },
+  { label: 'Agentes de IA', to: '/modulo/agentes-ia-sistemas-multiagente' },
 ]
 
 export default function Footer() {

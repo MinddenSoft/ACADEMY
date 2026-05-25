@@ -68,6 +68,8 @@ export default function FinalProjectPage() {
                   { module: 'Módulo 4', skill: 'Redes neuronales con PyTorch' },
                   { module: 'Módulo 5', skill: 'Pipeline RAG con LangChain' },
                   { module: 'Módulo 6', skill: 'API desplegada con Docker y CI/CD' },
+                  { module: 'Módulo 7', skill: 'Pipelines de datos con Spark, Airflow y dbt' },
+                  { module: 'Módulo 8', skill: 'Agentes autónomos y sistemas multi-agente con LangGraph y CrewAI' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 rounded-lg bg-white dark:bg-dark-800 border border-neutral-100 dark:border-white/5">
                     <span className="text-xs font-bold text-accent-500 dark:text-accent-400 flex-shrink-0 mt-0.5">{item.module}</span>

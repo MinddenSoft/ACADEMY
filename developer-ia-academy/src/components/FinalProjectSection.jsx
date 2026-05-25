@@ -61,7 +61,7 @@ export default function FinalProjectSection() {
                 <div className="p-6 rounded-xl bg-primary-50/50 dark:bg-primary-900/20 border border-neutral-100 dark:border-white/10">
                   <h4 className="font-semibold text-primary-900 dark:text-white mb-4 text-sm uppercase tracking-wider">Tecnologías que dominarás</h4>
                   <div className="grid grid-cols-2 gap-3">
-                    {['Python', 'PyTorch / TF', 'LangChain', 'FastAPI', 'Docker', 'GitHub Actions'].map((tech) => (
+                    {['Python', 'PyTorch / TF', 'LangChain', 'FastAPI', 'Docker', 'GitHub Actions', 'Apache Spark', 'LangGraph / CrewAI'].map((tech) => (
                       <div key={tech} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-white/5 border border-neutral-100 dark:border-white/5 text-neutral-700 dark:text-neutral-300 text-xs font-medium">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent-400" />
                         {tech}
