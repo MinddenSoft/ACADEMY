@@ -8,12 +8,14 @@ const gradients = [
   'from-accent-400 to-primary-700',
   'from-accent-500 to-primary-700',
   'from-accent-500 to-primary-800',
+  'from-accent-500 to-primary-900',
+  'from-accent-600 to-primary-800',
   'from-accent-600 to-primary-900',
 ]
 
 export default function ModuleCard({ module, index }) {
   const cfg = levelConfig[module.levelKey]
-  const gradient = gradients[index % gradients.length]
+  const gradient = gradients[Math.min(index, gradients.length - 1)]
 
   return (
     <Link

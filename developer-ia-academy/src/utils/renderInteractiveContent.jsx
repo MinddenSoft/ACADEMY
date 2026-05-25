@@ -87,12 +87,30 @@ function isCode(text) {
     /^\/\//, /^#\s/, /^\|--\s/, /^[a-z_]+\s*=/, /^from\s/, /^export\s/, /^echo\s/,
     /^[a-zA-Z_]\w*\.\w+/,
     /^[)\]\}]/,
-    /^    \w/,
     /^[A-Z_]\w*\s*=\s*/,
     /^[A-Z_]\w*,\s*[a-zA-Z_]/,
     /^(python\d*|pip\d*|conda|source|activate|deactivate|dvc|mlflow|docker|locust|npm|node|npx|yarn|curl|wget|uvicorn|gunicorn|pytest|black|flake8|mypy|poetry|pre-commit|ssh|scp|rsync|make|cargo|go|java|mvn)\s/,
     /^(ls|cd|rm|mv|cp|mkdir|chmod|cat|grep|find|awk|sed|ps|kill|sudo|apt|brew|yum|which|env|set|unset)\s/,
     /^\w+\s+[-\/]/, // command with flag (python -m, pip install, dvc add)
+    /^[a-zA-Z_]\w*\s*=(?!>)/, // camelCase assignments (inputCols=, outputCol=, labelCol=)
+    /^"[^"]+"\s*:/, // quoted dict/JSON keys ("name": ..., "owner": ...)
+    /^\w[\w-]*:/, // YAML and unquoted dict keys (name:, config-version:)
+    /^\w+\s*>>/, // Airflow dependency operator (validation >>, branch >>)
+    /^[\{\[\(]/, // opening bracket on its own line
+    /^--/, // SQL and dbt comments
+    /^\.\w+[(\[]/, // method chaining (.filter(, .schema(, .parquet()
+    /^[A-Z][a-zA-Z]+\(/, // class instantiation (StructField(, VectorAssembler(, Pipeline()
+    /^[a-z_]\w*\(/, // lowercase function calls (col(, count(, window(, spark_sum()
+    /^(SELECT|FROM|WHERE|WITH|JOIN|GROUP|ORDER|HAVING|CREATE|INSERT|UPDATE|DELETE|ALTER|EXPLAIN|REFRESH|AND|OR|UNION)(\s|$)/i, // SQL keywords
+    /^"""/, // Python triple-quote docstrings
+    /^assert\s/, // Python assert statements
+    /^(ENV|RUN|COPY|FROM|EXPOSE|WORKDIR|USER|ARG)\s/, // Dockerfile directives
+    /^[a-zA-Z_]\w*\[/, // Python subscript access (axes[1], pe[:, ...], df["col"])
+    /^[a-z_]\w*\s+(VARCHAR|INTEGER|BIGINT|INT|SERIAL|BIGSERIAL|TEXT|DATE|TIMESTAMP|TIMESTAMPTZ|DECIMAL|NUMERIC|FLOAT|BOOLEAN|JSONB|UUID|CHAR|REAL|SMALLINT|ARRAY|CONSTRAINT)[\s(,;]/i, // SQL DDL column types
+    /^\.\w+\//, // dotfile paths (.venv/, .git/)
+    /^\w+\/$/, // gitignore directory paths (venv/, env/, models/)
+    /^\+[\w-]+:/, // dbt config keys (+materialized:, +schema:, +tags:)
+    /^"[^"]+"[,)]?\s*$/, // standalone string literals in arrays ("text", "text")
   ]
   const codeLines = text.split('\n').filter(l => l.trim())
   if (codeLines.length === 0) return false
